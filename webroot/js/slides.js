@@ -212,10 +212,12 @@ function slideKickOff() {
 					let prevTextWeathers = $('#travel-container #travel-content .weathers').text()
 					$('#travel-container #travel-content .weathers').text(prevTextWeathers += "\n               " + condReplace(weatherData.travel.cities[i].days[0].condition))
 					let prevTextHigh = $('#travel-container #travel-content .his').text()
-					$('#travel-container #travel-content .his').text(prevTextHigh += "\n" + weatherData.travel.cities[i].days[0].high)
+					$('#travel-container #travel-content .his').text(prevTextHigh += "    \n" + weatherData.travel.cities[i].days[0].high)
 					let prevTextLow = $('#travel-container #travel-content .lows').text()
-					$('#travel-container #travel-content .lows').text(prevTextLow += "    \n" + weatherData.travel.cities[i].days[0].low)
+					$('#travel-container #travel-content .lows').text(prevTextLow += "\n" + weatherData.travel.cities[i].days[0].low)
 				}
+		    let prevTextHigh = $('#travel-container #travel-content .his').text()
+                $('#travel-container #travel-content .his').text(prevTextHigh += "    ")
             
                 $('#travel-container #travel-title-container').marquee({speed: 110, direction: 'up', pauseOnHover: false});
                 $('#travel-container #travel-title-container').on('finished', function() {$('#travel-container #travel-title-container').marquee('destroy'), $('#travel-container #travel-title-container').fadeOut(0)});
