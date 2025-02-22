@@ -1,0 +1,813 @@
+@font-face {
+    font-family: 'mainfont';
+    src: url(/fonts/Star4000.woff) format("woff");
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'smallfont';
+    src: url(/fonts/Star4000Small.woff) format("woff");
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'largefont';
+    src: url(/fonts/Star4000LargeCompressed.woff) format("woff");
+    font-weight: 700;
+    font-style: normal;
+}
+#main {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    overflow: hidden;
+    transform: translate(-50%, -50%);
+    width: 1440px;
+    height: 1080px;
+    will-change: transform;
+}
+#main>#template {
+    display: block;
+    max-height: 100%;
+    min-width: 100%;
+    min-height: 100%;
+}
+a, body, div, h1, html, p {
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+    text-shadow: 6px 6px #000;
+    paint-order: stroke fill;
+    -webkit-text-stroke: 6px #000;
+}
+html * {
+    box-sizing: border-box;
+}
+body, html {
+    color: #FFF;
+    height: 100%;
+    background-color: #000;
+    font-size: 100%;
+}
+#startup-screen {
+    position:absolute;
+    margin-left: 5%;
+    margin-top: 11%;
+    width: 90%;
+    height: 675px;
+}
+#startup-text {
+    font-family: 'mainfont';
+    font-size: 76px;
+    letter-spacing: -2px;
+    text-align: center;
+    white-space: pre-wrap;
+}
+#startup-credits {
+    font-family: 'smallfont';
+    font-size: 65.1px;
+    text-align: center;
+    margin-top: 20px;
+    line-height: 55px;
+}
+#startup-copyright {
+    font-family: 'mainfont';
+    font-size: 76px;
+    letter-spacing: -2px;
+    line-height: 90px;
+    text-align: center;
+    white-space: pre-wrap;
+}
+#template {
+    position: absolute;
+    display: block;
+    max-height: 100%;
+    max-width: 100%;
+    z-index: -10;
+}
+#title-container {
+    position:absolute;
+    margin-top: 5.5%;
+    margin-left: 165.275px;
+    width: 1087px;
+    height: 90px;
+    font-size: 76px;
+    letter-spacing: -2px;
+    line-height: 90px;
+}
+#slide-title-text {
+    position:absolute;
+    font-family: 'mainfont';
+    font-size: 76px;
+    width: 100%;
+    white-space: pre;
+}
+#bulletin-background {
+    position: absolute;
+    width: 100%;
+    height: 861px;
+    background-color: #fe0001;
+    z-index: 25000;
+}
+#bulletin-container {
+    position:absolute;
+    overflow: hidden;
+    margin-left: 165.275px;
+    margin-top: 6%;
+    width: 1087px;
+    height: 775px;
+    z-index: 25005;
+    font-size: 76px;
+    letter-spacing: -2px;
+    line-height: 90px;
+}
+#bulletin-container #bulletin {
+    font-family: 'mainfont';
+    position: absolute;
+    overflow: hidden;
+    width: 100%;
+    height: 775px;
+    white-space: pre-wrap;
+    z-index: 25006
+}
+#travel-background {
+    position: absolute;
+    width: 100%;
+    height: 850px;
+    background-color: #555652;
+    z-index: 15000;
+}
+#travel-container {
+    position:absolute;
+    font-family: 'mainfont';
+    overflow: hidden;
+    margin-left: 165.275px;
+    margin-top: 6%;
+    width: 1097px;
+    height: 764px;
+    z-index: 15001;
+}
+#travel-container #travel-title-container {
+    position:absolute;
+    width: 100%;
+    height: 759px;
+    letter-spacing: -2px;
+    text-align: left;
+    font-size: 98px;
+}
+#travel-title-text {
+    line-height: 108px;
+    white-space: pre;
+}
+#travel-container #travel-content {
+    position: absolute;
+    font-family: 'largefont';
+    font-size: 76px;
+    width: 1097px;
+    height: 759px;
+}
+#travel-container #travel-content * {
+    line-height: 135px;
+    letter-spacing: -2px;
+}
+#travel-container #travel-content .cities {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    white-space: pre-wrap;
+}
+#travel-container #travel-content .weathers {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    white-space: pre-wrap;
+}
+#travel-container #travel-content .his {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: right;
+    transform: translate(-10px);
+    white-space: pre-wrap;
+}
+#travel-container #travel-content .lows {
+    position: absolute;
+    text-align: right;
+    width: 100%;
+    height: 100%;
+    white-space: pre-wrap;
+}
+#slides {
+    position:absolute;
+    margin-left: 165.275px;
+    margin-top: 11%;
+    width: 1087px;
+    height: 675px;
+    font-size: 76px;
+    letter-spacing: -2px;
+    line-height: 90px;
+}
+.info-cc {
+    position: absolute;
+    font-family: 'mainfont';
+    font-size: 76px;
+    line-height: 90px;
+    width: 100%;
+    height: 100%;
+}
+.info-cc .current-condition {
+    position: absolute;
+}
+.info-cc .text-temperature {
+    position: absolute;
+    white-space: pre-wrap;
+    margin-top: 90px;
+}
+.info-cc .current-temperature {
+    position: absolute;
+    right: 0px;
+    white-space: pre-wrap;
+    margin-top: 90px;
+}
+.info-cc .text-windchill {
+    position: absolute;
+    margin-top: 90px;
+    white-space: pre-wrap;
+}
+.info-cc .current-windchill {
+    position: absolute;
+    margin-top: 90px;
+    right: 0px;
+    white-space: pre-wrap;
+}
+.info-cc .text-humidity {
+    position: absolute;
+    white-space: pre-wrap;
+    margin-top: 180px;
+}
+.info-cc .current-humidity {
+    position: absolute;
+    white-space: pre-wrap;
+    margin-top: 180px;
+    right: 0px;
+}
+.info-cc .text-dewpoint {
+    position: absolute;
+    margin-top: 180px;
+    white-space: pre-wrap;
+}
+.info-cc .current-dewpoint {
+    position: absolute;
+    margin-top: 180px;
+    right: 0px;
+    white-space: pre-wrap;
+}
+.info-cc .text-pressure {
+    position: absolute;
+    margin-top: 270px;
+}
+.info-cc .current-pressure {
+    position: absolute;
+    margin-top: 270px;
+    white-space: pre-wrap;
+}
+.info-cc .text-wind {
+    position: absolute;
+    white-space: pre-wrap;
+    margin-top: 360px;
+}
+.info-cc .current-wind {
+    position: absolute;
+    white-space: pre-wrap;
+    margin-top: 360px;
+}
+.info-cc .text-visibility {
+    position: absolute;
+    white-space: pre-wrap;
+    margin-top: 450px;
+}
+.info-cc .current-visibility {
+    position: absolute;
+    white-space: pre-wrap;
+    right: 0px;
+    margin-top: 450px;
+}
+.info-cc .text-ceiling {
+    position: absolute;
+    margin-top: 450px;
+    white-space: pre-wrap;
+}
+.info-cc .current-ceiling {
+    position: absolute;
+    margin-top: 450px;
+    white-space: pre-wrap;
+    right: 0px;
+}
+.info-cc .current-month-precip {
+    position: absolute;
+    margin-top: 540px;
+    white-space: pre;
+    width: 100%;
+}
+.hourly-observations {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.hourly-observations .header {
+    position:absolute;
+    font-family: 'smallfont';
+    line-height: 60px;
+    white-space: pre;
+}
+.hourly-observations .cities{
+    position: absolute;
+    font-family: 'mainfont';
+    margin-top: 60px;
+}
+.hourly-observations .cities * {
+    white-space: pre-wrap;
+}
+.hourly-observations .temps{
+    position: absolute;
+    font-family: 'mainfont';
+    right: 0px;
+    text-align: right;
+    margin-top: 60px;
+}
+.hourly-observations .temps * {
+    white-space: pre-wrap;
+}
+.hourly-observations .weathers {
+    position: absolute;
+    font-family: 'mainfont';
+    text-align: left;
+    margin-top: 60px;
+}
+.hourly-observations .weathers * {
+    white-space: pre-wrap;
+}
+.hourly-observations .winds{
+    position: absolute;
+    font-family: 'mainfont';
+    margin-top: 60px;
+    width: 100%;
+    text-align: right;
+}
+.hourly-observations .winds * {
+    white-space: pre-wrap;
+}
+.daypart-forecast {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.daypart-forecast .forecast-1-bulletin {
+    transform: translate(0px, -30px);
+    height: 705px;
+    overflow: hidden;
+}
+.daypart-forecast .forecast-1-bulletin .border1 {
+    position: absolute;
+    width: 100%;
+    font-family: 'mainfont';
+    white-space: pre-wrap;
+}
+.daypart-forecast .forecast-1-bulletin .border2 {
+    position: absolute;
+    width: 100%;
+    font-family: 'mainfont';
+    text-align: right;
+    white-space: pre-wrap;
+}
+.daypart-forecast .forecast-1-bulletin .daypartalert {
+    position: relative;
+    white-space: pre-wrap;
+    margin-left: 37.0975px;
+    width: 1011px;
+    font-family: 'mainfont';
+    text-align: center;
+}
+.daypart-forecast .forecast-1-bulletin .forecast1 {
+    position: relative;
+    white-space: pre-wrap;
+    width: 100%;
+    font-family: 'mainfont';
+}
+.daypart-forecast .forecast-1 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding-top: 65px;
+    font-family: 'mainfont';
+    white-space: pre-wrap;
+    overflow: hidden;
+}
+.extended-forecast {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.extended-forecast .days {
+    position: absolute;
+    width: 100%;
+    height: 90px;
+    margin-top: 90px;
+}
+.extended-forecast .day-1 {
+    position: absolute;
+    height: 90px;
+    font-family: 'mainfont';
+    white-space: pre-wrap;
+}
+.extended-forecast .day-2 {
+    position: absolute;
+    height: 90px;
+    font-family: 'mainfont';
+    white-space: pre-wrap;
+}
+.extended-forecast .day-3 {
+    position: absolute;
+    height: 90px;
+    font-family: 'mainfont';
+    white-space: pre;
+}
+.extended-forecast .extended-conditions {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin-top: 180px;
+}
+.extended-forecast .extended-conditions .con-1 {
+    position: absolute;
+    height: 90px;
+    padding-left: 37.0975px;
+    width: 408.0725px;
+    font-family: 'mainfont';
+    white-space: pre-wrap;
+}
+.extended-forecast .extended-conditions .con-2 {
+    position: absolute;
+    height: 90px;
+    margin-left: 408.0725px;
+    width: 370.975px;
+    font-family: 'mainfont';
+}
+.extended-forecast .extended-conditions .con-3 {
+    position: absolute;
+    width: 333.8775px;
+    height: 90px;
+    font-family: 'mainfont';
+    margin-left: 779.0475px;
+}
+.extended-forecast .extended-los {
+    position: absolute;
+    width: 100%;
+    height: 90px;
+    margin-top: 445px;
+}
+.extended-forecast .extended-los .lo-text-1 {
+    position: absolute;
+    height: 90px;
+    right: 0px;
+    font-family: 'mainfont';
+    white-space: pre-wrap;
+}
+.extended-forecast .extended-los .lo-text-2 {
+    position: absolute;
+    height: 90px;
+    right: 0px;
+    font-family: 'mainfont';
+    white-space: pre-wrap;
+}
+.extended-forecast .extended-los .lo-text-3{
+    position: absolute;
+    right: 0px;
+    font-family: 'mainfont';
+    white-space: pre-wrap;
+}
+.extended-forecast .extended-los .lo-1 {
+    position: absolute;
+    height: 90px;
+    font-family: 'mainfont';
+    white-space: pre-wrap;
+}
+.extended-forecast .extended-los .lo-2 {
+    position: absolute;
+    height: 90px;
+    font-family: 'mainfont';
+    white-space: pre-wrap;
+}
+.extended-forecast .extended-los .lo-3{
+    position: absolute;
+    height: 90px;
+    font-family: 'mainfont';
+    white-space: pre-wrap;
+}
+.extended-forecast .extended-his {
+    position: absolute;
+    width: 100%;
+    height: 90px;
+    margin-top: 540px;
+}
+.extended-forecast .extended-his .hi-text-1 {
+    position: absolute;
+    height: 90px;
+    right: 0px;
+    font-family: 'mainfont';
+    white-space: pre-wrap;
+}
+.extended-forecast .extended-his .hi-text-2 {
+    position: absolute;
+    height: 90px;
+    right: 0px;
+    font-family: 'mainfont';
+    white-space: pre-wrap;
+}
+.extended-forecast .extended-his .hi-text-3{
+    position: absolute;
+    right: 0px;
+    font-family: 'mainfont';
+    white-space: pre-wrap;
+}
+.extended-forecast .extended-his .hi-1 {
+    position: absolute;
+    height: 90px;
+    font-family: 'mainfont';
+    white-space: pre-wrap;
+}
+.extended-forecast .extended-his .hi-2 {
+    position: absolute;
+    height: 90px;
+    font-family: 'mainfont';
+    white-space: pre-wrap;
+}
+.extended-forecast .extended-his .hi-3{
+    position: absolute;
+    height: 90px;
+    font-family: 'mainfont';
+    white-space: pre-wrap;
+}
+.almanac {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    font-family: 'mainfont';
+    margin-top: 40px;
+}
+.almanac .header {
+    position:absolute;
+    width: 100%;
+    height: 100px;
+}
+.almanac .header .header-1 {
+    position:absolute;
+    white-space: pre;
+}
+.almanac .header .header-2 {
+    position:absolute;
+    white-space: pre;
+}
+.almanac .sideheader {
+    position: absolute;
+    margin-top: 90px;
+    width: 100%;
+}
+.almanac .day-1-info {
+    position:absolute;
+    margin-top: 90px;
+    width: 100%;
+}
+.almanac .day-1-info .sunrise {
+    position:absolute;
+    right: 0px;
+    white-space: pre-wrap;
+}
+.almanac .day-1-info .sunset {
+    position:absolute;
+    right: 0px;
+    white-space: pre-wrap;
+    margin-top: 90px;
+}
+.almanac .day-1-info .low {
+    position:absolute;
+    margin-top: 180px;
+    right: 0px;
+    white-space: pre-wrap;
+}
+.almanac .day-1-info .high {
+    position:absolute;
+    margin-top: 270px;
+    right: 0px;
+    white-space: pre-wrap;
+}
+.almanac .day-2-info {
+    position:absolute;
+    margin-top: 90px;
+    width: 100%;
+    right: 0px;
+}
+.almanac .day-2-info .sunrise {
+    position:absolute;
+    right: 0px;
+    white-space: pre-wrap;
+}
+.almanac .day-2-info .sunset {
+    position:absolute;
+    margin-top: 90px;
+    right: 0px;
+    white-space: pre-wrap;
+}
+.almanac .day-2-info .low {
+    position:absolute;
+    margin-top: 180px;
+    right: 0px;
+    white-space: pre-wrap;
+}
+.almanac .day-2-info .high {
+    position:absolute;
+    margin-top: 270px;
+    right: 0px;
+    white-space: pre-wrap;
+}
+.almanac .normal-precip {
+    position: absolute;
+    width: 100%;
+    margin-top: 495px;
+}
+.almanac .normal-precip-info {
+    position: absolute;
+    margin-top: 495px;
+    right: 0px;
+    white-space: pre-wrap;
+}
+.regional-forecast {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.regional-forecast .header {
+    white-space: pre;
+    position:absolute;
+    font-family: 'smallfont';
+    line-height: 60px;
+}
+
+.regional-forecast .cities{
+    position: absolute;
+    font-family: 'mainfont';
+    width: 100%;
+    text-align: left;
+    margin-top: 60px;
+    line-height: 90px;
+}
+.regional-forecast .weathers{
+    position: absolute;
+    font-family: 'mainfont';
+    width: 100%;
+    text-align: left;
+    margin-top: 60px;
+}
+.regional-forecast .weathers * {
+    white-space: pre-wrap;
+}
+.regional-forecast .lows{
+    position: absolute;
+    font-family: 'mainfont';
+    right: 0px;
+    margin-top: 60px;
+}
+.regional-forecast .lows * {
+    white-space: pre-wrap;
+}
+.regional-forecast .highs{
+    position: absolute;
+    font-family: 'mainfont';
+    margin-top: 60px;
+    right: 0px;
+    text-align: right;
+}
+.regional-forecast .highs * {
+    white-space: pre-wrap;
+}
+.regional-conditions {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.regional-conditions .header {
+    position:absolute;
+    font-family: 'smallfont';
+    line-height: 60px;
+    white-space: pre;
+}
+.regional-conditions .cities{
+    position: absolute;
+    font-family: 'mainfont';
+    margin-top: 60px;
+}
+.regional-conditions .weathers{
+    position: absolute;
+    font-family: 'mainfont';
+    margin-top: 60px;
+}
+.regional-conditions .weathers * {
+    white-space: pre-wrap;
+}
+.regional-conditions .temps{
+    position: absolute;
+    font-family: 'mainfont';
+    margin-top: 60px;
+    width: 100%;
+    text-align: right;
+}
+.outlook {
+    position: absolute;
+    width: 100%;
+    height: 620px;
+    margin-top: 60px;
+    overflow: hidden;
+}
+.outlook .month {
+    position: absolute;
+    width: 100%;
+    height: 90px;
+    white-space: pre-wrap;
+    font-family: 'mainfont';
+}
+.outlook .outlook-desc {
+    position: absolute;
+    width: 100%;
+    height: 450px;
+    font-family: 'mainfont';
+    margin-top: 180px;
+}
+#lowerline {
+    position: absolute;
+    height: 8px;
+    width: 100%;
+    background-color: #FFF;
+    margin-top: 59%;
+    z-index: 1800;
+}
+#lowerbar {
+    width: 1087px;
+    height: 250px;
+    margin-left: 165.275px;
+    margin-top: 858px;
+    font-size: 76px;
+    letter-spacing: -2px;
+    line-height: 90px;
+}
+#date-time {
+    position:relative;
+    font-family: 'smallfont';
+    line-height: 15px;
+    width: 100%;
+}
+#date {
+    position: absolute;
+    white-space: pre-wrap;
+}
+#time {
+    position: absolute;
+    white-space: pre-wrap;
+    right: 0px;
+}
+#lowerinfotext {
+    position: absolute;
+    font-family: 'mainfont';
+    text-align: left;
+    white-space: pre;
+    margin-top: 35px;
+}
+#marqueeholder {
+    position: absolute;
+    overflow: hidden;
+    white-space:nowrap;
+    width: 100%;
+    height: 100%;
+    line-height: 80px;
+    font-family: 'mainfont';
+    transform: translate(-165.275px, 0px);
+}
+#marqueetext {
+    white-space: pre-wrap;
+    font-family: 'mainfont';
+}
+.in-progress {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.in-progress .text {
+    font-family: 'mainfont';
+    text-align: center;
+}
+.lowerbar-bg {
+    position: absolute;
+    z-index: -10;
+    margin-top: 52.7%;
+    width: 100%;
+    height: 226px;
+}
