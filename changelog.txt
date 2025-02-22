@@ -1,5 +1,8 @@
 
 Make sure to report any bugs or issues in the Issues tab
+= February 22, 2025 =
+ -  Fixed Travel glitch
+FILES TO GET/CHANGE: /js/slides.js
 = February 21, 2025 =
  -  Simulator released
 FILES TO GET/CHANGE: entire webroot folder
