@@ -219,16 +219,24 @@ function slideKickOff() {
 		    let prevTextHigh = $('#travel-container #travel-content .his').text()
                 $('#travel-container #travel-content .his').text(prevTextHigh += "    ")
             
-                $('#travel-container #travel-title-container').marquee({speed: 110, direction: 'up', pauseOnHover: false});
-                $('#travel-container #travel-title-container').on('finished', function() {$('#travel-container #travel-title-container').marquee('destroy'), $('#travel-container #travel-title-container').fadeOut(0)});
+                // This fix also comes to the 4000!
+                var $titleContainer = $('#travel-container #travel-title-container');
+                $titleContainer.marquee('destroy');
+                $titleContainer.off('finished');             
+                $titleContainer.marquee({speed: 110, direction: 'up', pauseOnHover: false});
+                $titleContainer.on('finished', function() {
+                    $titleContainer.marquee('destroy');
+                    $titleContainer.fadeOut(0)
+                });
+
                 $('#travel-content .cities').marquee({speed: 110, direction: 'up', pauseOnHover: false});
-                $('#travel-content .cities').on('finished', function() {$('#travel-content .cities').fadeOut(0)});
+                $('#travel-content .cities').off('finished').on('finished', function() {$('#travel-content .cities').fadeOut(0)});
                 $('#travel-content .weathers').marquee({speed: 110, direction: 'up', pauseOnHover: false});
-                $('#travel-content .weathers').on('finished', function() {$('#travel-content .weathers').fadeOut(0)});
+                $('#travel-content .weathers').off('finished').on('finished', function() {$('#travel-content .weathers').fadeOut(0)});
                 $('#travel-content .his').marquee({speed: 110, direction: 'up', pauseOnHover: false});
-                $('#travel-content .his').on('finished', function() {$('#travel-content .his').fadeOut(0)});
+                $('#travel-content .his').off('finished').on('finished', function() {$('#travel-content .his').fadeOut(0)});
                 $('#travel-content .lows').marquee({speed: 110, direction: 'up', pauseOnHover: false});
-                $('#travel-content .lows').on('finished', function() {$('#travel-content .lows').fadeOut(0)});
+                $('#travel-content .lows').off('finished').on('finished', function() {$('#travel-content .lows').fadeOut(0)});
                 
 				setTimeout(function() {
                     $('#travel-container').fadeOut(0);
